@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const User = require('../../db/models').User;
+const User = require('../../db').User;
 
 
 //FUNCTIONS//
