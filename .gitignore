@@ -4,3 +4,4 @@ node_modules
 npm-debug.log*
 
 front/bundle
+back/db/config/config.json
