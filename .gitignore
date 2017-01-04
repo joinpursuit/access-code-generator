@@ -1,5 +1,5 @@
 node_modules
-
+*.ai
 *.log
 npm-debug.log*
 
