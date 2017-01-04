@@ -1,13 +1,13 @@
 const app = require('./back/server');
-const sequelizeConnection = require('./back/db');
-const environmentVariables = require('./back/env');
+const db = require('./back/db').sequelize;
 
-sequelizeConnection
+db
 .authenticate()
 .then(() => {
   //this if statement will prevent our express server and test server (using supertest) from trying to access the same port at the same time
   if (!module.parent) {
-     app.listen(environmentVariables.PORT, () => console.log('Listening on port ' + environmentVariables.PORT));
+      app.set('port', process.env.PORT || 3000);
+     app.listen(app.get('port'), () => console.log(`Listening on port ${app.get('port')}`));
   };
 })
 .catch((err) => console.log('Unable to connect to the database:', err));

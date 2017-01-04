@@ -5,3 +5,5 @@ npm-debug.log*
 
 front/bundle
 back/db/config/config.json
+
+back/env/development.js

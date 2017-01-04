@@ -18,10 +18,11 @@ const App = React.createClass({
     })
   },
   render() {
+    const {channel, member} = this.props
     return (
       <div>
-        <Navbar items={[{text: 'Home', url: '/'}, {text: 'Login', url: '/login'}]} />
-        {this.props.children}
+        {channel}
+        {member}
       </div>
     )
   }
