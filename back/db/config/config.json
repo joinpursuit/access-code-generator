@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
+    "username": "jondubya",
     "password": null,
-    "database": "database_development",
+    "database": "slackers",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "test": {
-    "username": "root",
+    "username": "jondubya",
     "password": null,
-    "database": "database_test",
+    "database": "slackers",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "production": {
-    "username": "root",
+    "username": "jondubya",
     "password": null,
-    "database": "database_production",
+    "database": "slackers",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   }
 }
