@@ -18,9 +18,10 @@ const App = React.createClass({
     })
   },
   render() {
-    const {channel, member} = this.props
+    const {channel, member, chat} = this.props
     return (
       <div>
+        {chat}
         {channel}
         {member}
       </div>
