@@ -1,3 +1,5 @@
+const User = require('./user');
+
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Team = sequelize.define('Team', {
@@ -5,8 +7,8 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // Team.hasMany(models.User)
-        // Team.hasMany(models.Chatroom)
+        Team.belongsToMany(models.User, ({ through: 'Company' }))
+        Team.hasMany(models.Chatroom)
       }
     }
   });

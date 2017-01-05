@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Chatroom = require('../../db/models').Chatroom;
+const Chatroom = require('../../db/models');
 
 //new chat room
 const createChat = (req,res) => {
