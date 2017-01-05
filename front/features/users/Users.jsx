@@ -1,4 +1,5 @@
 //Vanessa
+//all users(usernames) will be called from the database and displayed in a list
 
 import React from 'react';
 import $ from 'jQuery';
