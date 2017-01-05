@@ -1,5 +1,5 @@
 const server = require('./back/server');
-const db = require('./back/db').sequelize;
+const db = require('./back/db/models').sequelize;
 
 db
 .authenticate()
