@@ -3,7 +3,13 @@ module.exports = ((app,io)=>{
         debug = require('debug')('SOCKET')
 
   io.on('connection', socket => {
-    debug(socket.id)
-  })
+
+    socket.on('connection name',function(user){
+      io.sockets.emit('new user', user.name + " has joined.");
+    }); 
+
+    socket.on('disconnect', function(){
+    });
+  });
 
 })
