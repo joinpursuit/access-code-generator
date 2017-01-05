@@ -5,10 +5,11 @@ export const socket = io.connect();
 
 export default (store) => { 
   socket.on('connect', () =>{
-    console.log("connected")
+
   })
 
-  socket.on("received-message", msg =>{
+  socket.on("received-message", msg => {
+    console.log(msg)
     store.dispatch({
       type: UPDATE_MESSAGES,
       msg
