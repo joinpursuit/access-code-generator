@@ -5,7 +5,9 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        Chatroom.hasMany(models.User)
+        Chatroom.hasMany(models.Message)
+        Chatroom.belongsTo(models.Team)
       }
     }
   });
