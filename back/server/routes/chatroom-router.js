@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Chatroom = require('../../db').Chatroom;
+const Chatroom = require('../../db/models').Chatroom;
 
 //new chat room
 const createChat = (req,res) => {
@@ -30,14 +30,6 @@ const getSingleRoom = (req,res) => (
 
 //figure out function to what happens when user leaves room, if user is last person in room then the room closes. 
 
-include: [{
-        model: Tool,
-        as: 'Instruments',
-        where: { name: { $like: '%ooth%' } }
-    }]
-}).then(function(users) {
-    console.log(JSON.stringify(users))
-
 const exitRoom = (req,res)=> (
 	Chatroom.destroy({
 		where: {id: req.params.chatroomId}
@@ -59,3 +51,4 @@ router.route('/:chatid')
 	.get(getSingleRoom)
 	.delete(exitRoom)
 
+module.exports = router;
