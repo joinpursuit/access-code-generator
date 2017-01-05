@@ -4,20 +4,6 @@ var server = require('../back/server');
 var User = require('../back/db/models').User;
 
 describe('Demo tests', () => {
-  //fake user data that we'll use for tests
-  var users = [
-    {username: 'test1', password: 'pass1'},
-    {username: 'test2', password: 'pass2'},
-    {username: 'test3', password: 'pass3'},
-  ];
-  //you can use 'before' to seed your database with data before your tests
-  //you only need one 'before' statement
-  //theres also a 'beforeEach' method if you want a function to run before each of your tests, individually
-  before(() => {
-    return User.sync({force: true})
-    .then(() => User.bulkCreate(users))
-    .catch((err) => console.log('DB Err!', err));
-  });
 
   it(`demo test, should pass`, () => {
     expect(3).equal(3);
