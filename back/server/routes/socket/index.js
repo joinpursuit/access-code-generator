@@ -8,6 +8,10 @@ module.exports = ((app,io)=>{
       io.sockets.emit('new user', user.name + " has joined.");
     }); 
 
+    socket.on('message', msg => {
+      io.emit('recieved-message', msg)
+    })
+
     socket.on('disconnect', function(){
     });
   });
