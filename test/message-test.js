@@ -28,19 +28,17 @@ describe('Message tests', () => {
     .catch((err) => console.log('DB Err!', err));
   });
 
-  it(`demo test, should pass`, () => {
+  it(`message test, should pass`, () => {
     expect(3).equal(3);
   });
 
-  //this is just an example of how to do a basic test, in this case to he '/' route
-  //remove the 'x' before 'it' to run this test
-  // xit(`'/' should respond with 'hello world!'`, (done) => {
+  // it(`'/api/message' should respond with all messages`, (done) => {
   //   supertest(server)
-  //     .get('/')
+  //     .get('/api/message')
   //     .end((err, res) => {
-  //       expect(res.text).to.eql('hello world!');
+  //       expect(res.text).to.eql('demo route working!');
   //       //done is required in order to execute the test
-  //       done();
+  //       done(); 
   //     })
   // });
 
