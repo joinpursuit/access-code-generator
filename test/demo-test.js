@@ -6,9 +6,9 @@ var User = require('../back/db/models').User;
 describe('Demo tests', () => {
   //fake user data that we'll use for tests
   var users = [
-    {username: 'test1', email: 'test1@gmail.com', password: 'pass1'},
-    {username: 'test2', email: 'test2@gmail.com', password: 'pass2'},
-    {username: 'test3', email: 'test3@gmail.com', password: 'pass3'},
+    {username: 'test1', password: 'pass1'},
+    {username: 'test2', password: 'pass2'},
+    {username: 'test3', password: 'pass3'},
   ];
   //you can use 'before' to seed your database with data before your tests
   //you only need one 'before' statement
