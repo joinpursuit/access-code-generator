@@ -4,7 +4,7 @@
   "description": "Scaffolding for React, Node, Express, Sequelize projects",
   "main": "start.js",
   "scripts": {
-    "start": "npm test & webpack --watch & DEBUG=SERVER_INDEX,SOCKET nodemon start.js",
+    "start": "npm test & webpack --watch & DEBUG=SERVER_INDEX,SOCKET,TEST nodemon start.js",
     "test": "mocha --watch"
   },
   "keywords": [],

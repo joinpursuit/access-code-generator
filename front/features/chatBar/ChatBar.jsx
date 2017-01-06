@@ -8,7 +8,8 @@ const ChatBar = props => {
   };
 
   const sendMessage = () => {
-    socket.emit('message', input)
+    const channel = "test"
+    socket.emit('message', {room: channel, msg:input})
   };
 
   return (
