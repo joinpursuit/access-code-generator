@@ -1,6 +1,10 @@
 node_modules
-
+*.ai
 *.log
 npm-debug.log*
 
 front/bundle
+back/db/config/config.json
+
+back/env/development.js
+.DS_Store

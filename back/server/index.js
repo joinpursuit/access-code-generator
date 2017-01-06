@@ -1,8 +1,9 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const applyExpressMiddleware = require('./middleware');
-const routes = require('./routes');
+const express = require('express'),
+      app = express(),
+      path = require('path'),
+      applyExpressMiddleware = require('./middleware'),
+      routes = require('./routes'),
+      debug = require('debug')('SERVER_INDEX');
 
 applyExpressMiddleware(app);
 app.use('/api', routes);
@@ -12,4 +13,10 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../', 'front/index.html'));
 });
 
-module.exports = app;
+//socket 
+const server = require('http').Server(app),
+      io = require('socket.io')(server);
+
+require('./routes/socket')(app, io);
+
+module.exports = server;
