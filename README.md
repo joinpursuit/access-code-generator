@@ -1,4 +1,7 @@
 # Access Code Generator
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f347722d5b6b48d8943243bd1e282dc5)](https://www.codacy.com/app/nmadd/access-code-generator?utm_source=github.com&utm_medium=referral&utm_content=C4Q/access-code-generator&utm_campaign=badger)
+
 Welcome to the Access Code Generator! This is a scaffolding built using Node, Express, React, and Sequelize.
 
 ## Database Setup
